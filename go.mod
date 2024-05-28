@@ -1,4 +1,4 @@
-github.com/hooklift/gowsdl => github.com/eightywon/gowsdl
+github.com/eightywon/gowsdl
 
 go 1.15
 
