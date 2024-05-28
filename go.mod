@@ -1,4 +1,4 @@
-replace github.com/hooklift/gowsdl => module github.com/eightywon/gowsdl
+replace github.com/hooklift/gowsdl => github.com/eightywon/gowsdl
 
 go 1.15
 
