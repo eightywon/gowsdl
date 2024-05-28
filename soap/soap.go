@@ -30,8 +30,8 @@ type SOAPEnvelopeResponse struct {
 }
 
 type SOAPEnvelope struct {
-	XMLName xml.Name      `xml:"soap:Envelope"`
-	XmlNS   string        `xml:"xmlns:soap,attr"`
+	XMLName xml.Name      `xml:"soapenv:Envelope"`
+	XmlNS   string        `xml:"xmlns:soapenv,attr"`
 	Headers []interface{} `xml:"soap:Header"`
 	Body    SOAPBody
 }
@@ -422,6 +422,7 @@ func (s *Client) call(ctx context.Context, soapAction string, request, response 
 	// SOAP envelope capable of namespace prefixes
 	envelope := SOAPEnvelope{
 		XmlNS: XmlNsSoapEnv,
+		
 	}
 
 	envelope.Headers = s.headers
